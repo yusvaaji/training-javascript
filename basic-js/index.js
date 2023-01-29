@@ -65,4 +65,57 @@ function CheckBilGrade() {
     }
 }
 
+function CheckDiskonPromo() {
+    const testresultbilangan = document.getElementById("testresultbilangan");
+    var promo = document.getElementById("promo");
+    var purchase = document.getElementById("purchase");
+    var total = document.getElementById("total");
+    var disk = 0;
+
+    if (promo.value === "Discount10%") {
+        switch (true) {
+            case purchase.value >= 500000:
+                disk = 10;
+                break;
+            case purchase.value >= 300000 && purchase.value <= 500000:
+                disk = 5;
+                break;
+            case purchase.value < 300000 && purchase.value > 0:
+                disk = 2.5;
+                break;
+        }
+    } else if (promo.value === "DiscountHarbolnas") {
+        switch (true) {
+            case purchase.value >= 250000:
+                disk = 15;
+                break;
+            case purchase.value >= 300000 && purchase.value < 250000:
+                disk = 0;
+                break;
+        }
+    }
+
+    total.value = parseFloat(purchase.value) - (parseFloat(purchase.value) * disk) / 100;
+    if (parseFloat(total.value) > 0) {
+        testresultbilangan.innerHTML = `Total yang harus dibayar adalah : ${total.value}`;
+    }
+    // if (parseInt(umur.value) % 2 == 0) {
+    //     testresultbilangan.innerHTML = "Bilangan Genap <br>";
+    // } else {
+    //     testresultbilangan.innerHTML = "Bilangan Ganjil <br>";
+    // }
+
+    // if (parseInt(umur.value) <= 100 && parseInt(umur.value) >= 85) {
+    //     testresultbilangan.innerHTML += "Grade A : 100 - 85";
+    // } else if (parseInt(umur.value) <= 84 && parseInt(umur.value) >= 70) {
+    //     testresultbilangan.innerHTML += "Grade B : 84 - 70";
+    // } else if (parseInt(umur.value) <= 69 && parseInt(umur.value) >= 55) {
+    //     testresultbilangan.innerHTML += "Grade C : 69 - 55";
+    // } else if (parseInt(umur.value) <= 54 && parseInt(umur.value) >= 40) {
+    //     testresultbilangan.innerHTML += "Grade D : 54 - 40";
+    // } else if (parseInt(umur.value) <= 39) {
+    //     testresultbilangan.innerHTML += "Grade E : 39 - 70";
+    // }
+}
+
 //#endregion
