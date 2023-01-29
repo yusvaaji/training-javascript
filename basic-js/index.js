@@ -95,27 +95,11 @@ function CheckDiskonPromo() {
         }
     }
 
-    total.value = parseFloat(purchase.value) - (parseFloat(purchase.value) * disk) / 100;
+    total.value = parseFloat(purchase.value) - ((parseFloat(purchase.value) * disk) / 100);
     if (parseFloat(total.value) > 0) {
         testresultbilangan.innerHTML = `Total yang harus dibayar adalah : ${total.value}`;
     }
-    // if (parseInt(umur.value) % 2 == 0) {
-    //     testresultbilangan.innerHTML = "Bilangan Genap <br>";
-    // } else {
-    //     testresultbilangan.innerHTML = "Bilangan Ganjil <br>";
-    // }
 
-    // if (parseInt(umur.value) <= 100 && parseInt(umur.value) >= 85) {
-    //     testresultbilangan.innerHTML += "Grade A : 100 - 85";
-    // } else if (parseInt(umur.value) <= 84 && parseInt(umur.value) >= 70) {
-    //     testresultbilangan.innerHTML += "Grade B : 84 - 70";
-    // } else if (parseInt(umur.value) <= 69 && parseInt(umur.value) >= 55) {
-    //     testresultbilangan.innerHTML += "Grade C : 69 - 55";
-    // } else if (parseInt(umur.value) <= 54 && parseInt(umur.value) >= 40) {
-    //     testresultbilangan.innerHTML += "Grade D : 54 - 40";
-    // } else if (parseInt(umur.value) <= 39) {
-    //     testresultbilangan.innerHTML += "Grade E : 39 - 70";
-    // }
 }
 
 //#endregion
