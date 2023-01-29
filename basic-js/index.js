@@ -20,9 +20,11 @@ testresut.innerHTML = `Luas Segitiga : ${luas} `;
 
 const testresultlingkaran = document.getElementById("testresultlingkaran");
 var r = 10;
+var t = 7;
+
 var phi = 22 / 7;
 
-var luaslingkaran = 2 * (phi * r);
+var luaslingkaran = 2 * (phi * r * (r + t));
 testresultlingkaran.innerHTML = `Jari jari : ${r} </br> Luas Lingkaran : ${luaslingkaran} `;
 
 //#endregion
