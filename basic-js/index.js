@@ -25,6 +25,6 @@ var t = 7;
 var phi = 22 / 7;
 
 var luaslingkaran = 2 * (phi * r * (r + t));
-testresultlingkaran.innerHTML = `Jari jari : ${r} </br> Luas Lingkaran : ${luaslingkaran} `;
+testresultlingkaran.innerHTML = `Jari jari : ${r} </br> Tinggi : ${t} </br> Luas Lingkaran : ${luaslingkaran} `;
 
 //#endregion
